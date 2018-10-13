@@ -10,9 +10,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 function sum(a, b) { //eslint-disable-line
   // TODO: Write your code here
-  var output = a + b;
-  var message = 'The sum of ' + a + ' and ' + b + ' is ' + output + '.';
-  return [output, message]
+  var sumTot = a + b;
+  var message = 'The sum of ' + a + ' and ' + b + ' is ' + sumTot + '.';
+  return [sumTot, message]
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -86,8 +86,8 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(testArray) { //eslint-disable-line
   // TODO: Write your code here
   var arraySum = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
-  var arrayMessage = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${arraySum} is their sum.`
-  return [arraySum, arrayMessage]
+  var arraySumMessage = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${arraySum} is their sum.`
+  return [arraySum, arraySumMessage]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -107,12 +107,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 
-function multiplyArray(multArr) { //eslint-disable-line
+function multiplyArray(testArray) { //eslint-disable-line
   // TODO: Write your code here
+  var arrayProduct = multiply(multiply(testArray[0], testArray[1])[0], testArray[2])[0];
+  var arrayProductMessage = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${arrayProduct}.`
+  return [arrayProduct, arrayProductMessage]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
